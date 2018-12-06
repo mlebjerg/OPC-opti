@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\mlebjerg\BeerProduction\BeerProduction.OPC\BeerProduction.OPC.csproj" />
+    <ProjectReference Include="..\BeerProduction.OPC\BeerProduction.OPC.csproj" />
   </ItemGroup>
 
 </Project>
