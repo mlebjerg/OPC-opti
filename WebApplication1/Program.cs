@@ -7,6 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using WebApplication1.Models;
+using BeerProduction.OPC;
 
 namespace WebApplication1
 {
@@ -15,7 +17,11 @@ namespace WebApplication1
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
+
+            OpcStart.Instance.SetCntrlCmd(4);
+            OpcStart.Instance.SetCmdChangeRequest(true);
         }
+
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Models;
+using WebApplication1.Models;
 
 namespace WebApplication1.Models
 {
@@ -15,5 +16,7 @@ namespace WebApplication1.Models
         }
 
         public DbSet<MvcMovie.Models.Movie> Movie { get; set; }
+
+        public DbSet<WebApplication1.Models.Beer> Beer { get; set; }
     }
 }
